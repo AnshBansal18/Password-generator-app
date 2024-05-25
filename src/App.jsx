@@ -12,12 +12,12 @@ function App() {
   const [charall, setCharall] = useState(false);
 
   return (
-    <>
+    <div className="flex flex-col min-h-screen bg-gray-900 text-gray-100">
       <Header />
 
-      <div className="flex items-center justify-center min-h-screen bg-gray-900">
-        <div className="flex flex-col items-center bg-gray-800 text-white rounded-xl p-8 mt-8 shadow-md">
-          <h1 className="text-3xl mb-8 text-purple-300 font-bold">Secure Password Generator</h1>
+      <div className="flex-grow flex items-center justify-center">
+        <div className="flex flex-col items-center bg-gray-800 text-white rounded-xl p-8 mt-8 shadow-md sm:p-6 md:p-8 lg:p-10 xl:p-12 animate-fadeIn">
+          <h1 className="text-3xl mb-8 text-purple-400 font-bold text-center animate-pulse">Secure Password Generator</h1>
           <PasswordGenerator len={len} numall={numall} charall={charall} />
           <div className="mt-6 w-full max-w-sm">
             <LengthInput len={len} setLen={setLen} />
@@ -36,7 +36,7 @@ function App() {
       </div>
 
       <Footer />
-    </>
+    </div>
   );
 }
 
